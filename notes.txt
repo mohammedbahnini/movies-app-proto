@@ -1,0 +1,2 @@
+-- titles font family : Raleway / Kanit / Ubunto / Josefin Sans
+-- main text font family : Lunasima / Inter

@@ -15,6 +15,7 @@ body {
   min-height: 100vh;
   font-family: "Lunasima", sans-serif;
   background-color: rgb(246, 247, 255);
+  height: 2000px;
 }
 
 .container {
@@ -31,9 +32,25 @@ ul, ol {
   list-style: none;
 }
 
+p {
+  line-height: 1.5em;
+}
+
 header {
   -webkit-box-shadow: 0 2px 18px 2px rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 18px 2px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+header.scrolled {
+  background-color: white;
+}
+header.scrolled nav .link {
+  color: rgb(75, 93, 109);
 }
 header nav {
   padding: 2rem 0;
@@ -57,10 +74,10 @@ header nav ul {
   gap: 2rem;
 }
 header nav .logo img {
-  width: 7rem;
+  width: 8rem;
 }
 header nav .nav-search {
-  border: 2px solid rgb(130, 155, 176);
+  border: 1px solid rgb(130, 155, 176);
   padding: 0.8rem 1.5rem;
   border-radius: 20px;
   display: -webkit-box;
@@ -93,7 +110,7 @@ header nav .link, header nav .link::after {
   transition: 0.1s linear;
 }
 header nav a.link {
-  color: rgb(130, 155, 176);
+  color: white;
   position: relative;
 }
 header nav a.link::after {
@@ -111,4 +128,137 @@ header nav a.link:hover {
 }
 header nav a.link:hover::after {
   width: 100%;
+}
+
+.hero {
+  height: 40rem;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(0, 0, 0, 0.9)), color-stop(50%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.9))), url("../../assets/posters.jpg");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.9)), url("../../assets/posters.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  gap: 2rem;
+  max-width: 60%;
+}
+.hero .title {
+  font-family: "Raleway", sans-serif;
+  font-size: 3.7rem;
+  text-transform: uppercase;
+}
+.hero p {
+  line-height: 1.5em;
+  font-size: 1.2rem;
+}
+.hero .search-container {
+  background-color: white;
+  border: none;
+  font-size: 1.1rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+.hero .search-container input[type=text] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+}
+.hero .search-container button {
+  background-color: rgb(216, 31, 38);
+  color: white;
+  border: none;
+  outline: none;
+  padding: 1.5rem 2.5rem;
+  font-size: 1.1rem;
+}
+.hero .search-container button span {
+  margin-right: 5px;
+}
+
+.features {
+  text-align: center;
+  padding-top: 4rem;
+}
+.features .title {
+  color: rgb(75, 93, 109);
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 4rem;
+}
+.features .title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: rgb(216, 31, 38);
+  left: 0;
+  bottom: -0.5rem;
+}
+.features-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+.features .feature {
+  background-color: white;
+  border-radius: 15px;
+  padding: 1.3rem 1rem;
+  -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+}
+.features .feature:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.features .feature-logo {
+  color: rgb(216, 31, 38);
+  font-size: 2.5rem;
+}
+.features .feature-title {
+  color: rgb(75, 93, 109);
+  font-size: 1.6rem;
+}
+.features .feature p {
+  color: rgb(182, 196, 210);
 }

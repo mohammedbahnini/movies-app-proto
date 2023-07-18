@@ -14,9 +14,10 @@ body {
     min-height: 100vh;
     font-family: $text-font-family ;
     background-color: $bg-light-gray;
+    height: 2000px;
 }
 .container {
-    max-width: calc($max-container-width + 2rem);
+    max-width: calc($max-container-width + 2rem ) ;
     padding: 0 1rem;
     margin: 0 auto ;
 }
@@ -26,4 +27,8 @@ a{
 
 ul , ol{
     list-style: none;
+}
+
+p{
+    line-height: 1.5em  ;
 }

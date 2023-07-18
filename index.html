@@ -1,54 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CINEMAGNET</title>
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS -->
     <link rel="stylesheet" href="css/app.css">
 </head>
+
 <body>
     <!-- header -->
     <header>
         <div class="container">
+
+
             <nav>
                 <a href="#" class="logo">
                     <img src="assets/logo.png" alt="CineMagnet" />
                 </a>
 
-                <div class="nav-search">
-                    <span>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </span>
-                    <input type="text" placeholder="Quick Search" class='nav-search-input'>
-                </div>
+
 
                 <ul>
-                    <li>
+                    <!-- <li>
 
-                       
-                    </li>
+                        <div class="nav-search">
+                            <span>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                            <input type="text" placeholder="Quick Search" class='nav-search-input'>
+                        </div>
+                    </li> -->
                     <li>
                         <a href="#" class="link">
-                           Home
+                            Home
                         </a>
                     </li>
                     <li>
                         <a href="#" class="link">
-                           Tranding
+                            Tranding
                         </a>
                     </li>
                     <li>
                         <a href="#" class="link">
-                           Browse All Movies
+                            Browse All Movies
                         </a>
                     </li>
                 </ul>
             </nav>
+
+
+
+
+
+
         </div>
     </header>
     <!-- header -->
+
+    <main>
+        <!-- hero section -->
+        <section class="hero">
+
+            <div class="container">
+                <h1 class="title">Some text over here</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum enim ex ducimus ipsa amet nesciunt
+                    maxime, corporis tempora animi consectetur repudiandae id eum voluptate, minus rerum obcaecati
+                    officiis iste sit?</p>
+
+                <div class="search-container">
+                    <!-- <span>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span> -->
+                    <input type="text" placeholder="Quick Search" class='nav-search-input'>
+                    <button><span>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span> Search</button>
+                </div>
+
+            </div>
+
+
+        </section>
+        <!-- hero section  -->
+
+
+        <!-- features -->
+        <section class="features">
+            <div class="container">
+                 <h2 class="title">Our features</h2>
+
+                 <div class="features-items">
+
+                    <div class="feature">
+                        <span class="feature-logo"><i class="fa-solid fa-ban"></i></span>
+                        <h3 class="feature-title">No ads</h3>
+                        <p>There is no ads here , no need to install ad-blockers , all for free .</p>
+                    </div>
+
+                    <div class="feature">
+                        <span class="feature-logo"><i class="fa-regular fa-file-zipper"></i></span>
+                        <h3 class="feature-title">Small size</h3>
+                        <p>Enjoy the best quality with less data .</p>
+                    </div>
+
+                    <div class="feature">
+                        <span class="feature-logo"><i class="fa-regular fa-hand-pointer"></i></span>
+                        <h3 class="feature-title">Easy</h3>
+                        <p>You can find any movie with just a few steps .</p>
+                    </div>
+
+                    <div class="feature">
+                        <span class="feature-logo"><i class="fa-solid fa-layer-group"></i></span>
+                        <h3 class="feature-title">Veriety</h3>
+                        <p>Almost all the movies have a multiple qualities .</p>
+                    </div>
+
+
+
+                 </div>
+
+
+
+
+
+
+
+            </div>
+        </section>
+         <!-- features -->
+    </main>
+
+
 </body>
+
+<script>
+    const header=  document.querySelector('header');
+    const hero = document.querySelector('.hero');
+    const body = document.querySelector('body');
+
+    window.addEventListener("scroll" , function(e){
+        if( window.scrollY >= 100)
+            header.classList.add('scrolled');
+        else    
+            header.classList.remove('scrolled');
+    });
+</script>
 </html>

@@ -1,0 +1,31 @@
+
+
+.last-added{
+    background-color: rgba($dark-gray  , .1);
+    &-items{
+        display: flex;
+        gap: 2rem;
+
+        .movie-card{
+            flex: 1;
+        }
+    }
+
+}
+
+
+  /* the slides */
+  .slick-slide {
+    margin: 0 1rem;
+    @include mq($md){
+        margin: 0 .5rem;
+    }
+}
+
+/* the parent */
+.slick-list {
+    margin: 0 -1rem;
+    @include mq($md){
+        margin: 0 -.5rem;
+    }
+}

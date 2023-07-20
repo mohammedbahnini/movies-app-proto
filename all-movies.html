@@ -213,7 +213,104 @@
         <!-- search section  -->
 
 
+        <!-- results -->
+        <section class="main-section  movies-wrapper">
 
+            <div class="container">
+
+                <h1 class="main-section-title title">120 movie found</h1>
+
+                <div class="movies-items">
+
+
+                    <div class="movie-card">
+                        <div class="movie-card-body">
+                            <div class="movie-hover">
+                                <btton class="movie-link">View Details</btton>
+                            </div>
+                            <div class="movie-poster">
+                                <img src="assets/avengers.jpg" alt="Avengers">
+                            </div>
+
+                            <span class="movie-year">2022</span>
+                            <span class="movie-rating">7</span>
+                        </div>
+                        <div class="movie-card-footer">
+                            <p>Avengers</p>
+                        </div>
+                    </div>
+
+
+                    <div class="movie-card">
+                        <div class="movie-card-body">
+                            <div class="movie-hover">
+                                <btton class="movie-link">View Details</btton>
+                            </div>
+                            <div class="movie-poster">
+                                <img src="assets/avengers.jpg" alt="Avengers">
+                            </div>
+
+                            <span class="movie-year">2022</span>
+                            <span class="movie-rating">7</span>
+                        </div>
+                        <div class="movie-card-footer">
+                            <p>Avengers</p>
+                        </div>
+                    </div>
+
+                    <div class="movie-card">
+                        <div class="movie-card-body">
+                            <div class="movie-hover">
+                                <btton class="movie-link">View Details</btton>
+                            </div>
+                            <div class="movie-poster">
+                                <img src="assets/avengers.jpg" alt="Avengers">
+                            </div>
+
+                            <span class="movie-year">2022</span>
+                            <span class="movie-rating">7</span>
+                        </div>
+                        <div class="movie-card-footer">
+                            <p>Avengers</p>
+                        </div>
+                    </div>
+
+                    <div class="movie-card">
+                        <div class="movie-card-body">
+                            <div class="movie-hover">
+                                <btton class="movie-link">View Details</btton>
+                            </div>
+                            <div class="movie-poster">
+                                <img src="assets/avengers.jpg" alt="Avengers">
+                            </div>
+
+                            <span class="movie-year">2022</span>
+                            <span class="movie-rating">7</span>
+                        </div>
+                        <div class="movie-card-footer">
+                            <p>Avengers</p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="pagination">
+                    <div class="pagination-items">
+                        <!-- <a href="#" class="pagination-item active">
+                            <i class="fa-solid fa-angles-left"></i>
+                        </a>
+                        <a href="#" class="pagination-item">1</a>
+                        <a href="#" class="pagination-item">2</a>
+                        <a href="#" class="pagination-item">3</a>
+                        <a href="#" class="pagination-item"><i class="fa-solid fa-angles-right"></i></a> -->
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- results -->
 
 
 
@@ -235,6 +332,95 @@
             header.classList.remove('scrolled');
     });
 
+
+    // global vars
+    const pagesToShow = 3;
+    const pages = 10;
+    let current = 1;
+    let withbreak = pages <= pagesToShow;
+
+    
+
+
+    // invoke the pagination method with the default value 
+    generatePagination(current);
+
+    // update the current page
+    function changeIndex(index) {
+
+        current = index;
+        generatePagination();
+    }
+
+    // generating pagination items 
+    function generatePagination() {
+
+        const paginationItems = [];
+
+
+        paginationItems.push(`<a href="#" class="pagination-item" data-page='0'>
+                            first
+                        </a>`);
+
+
+        if (pages - (current - 1 + pagesToShow) > 0) // break in end
+        {
+            for (let i = current; i <= (current + pagesToShow - 1) - 1; i++) {
+
+                paginationItems.push(`<a href="#" class="pagination-item ${i === current ? 'active' : ''}"
+            data-page='${i}' >${i}</a>`);
+            }
+
+            paginationItems.push(`<a href="#" class="pagination-item ">...</a>`);
+            paginationItems.push(`<a href="#" class="pagination-item " 
+            data-page='${pages}' >${pages}</a>`);
+
+        }
+        else { // break in begining
+            if (pagesToShow < pages) {
+                paginationItems.push(`<a href="#" class="pagination-item" data-page='${pages - pagesToShow}'>
+                    ${pages - pagesToShow}</a>`);
+                paginationItems.push(`<a href="#" class="pagination-item">...</a>`);
+            }
+
+            for (let i = pages - pagesToShow + 2; i <= pages; i++) {
+                if (i != 0) {
+                    paginationItems.push(`<a href="#" class="pagination-item ${i === current ? 'active' : ''}"" 
+                data-page='${i}'>${i}</a>`);
+                }
+
+            }
+        }
+
+        paginationItems.push(`<a href="#" class="pagination-item" data-page='${pages}'>
+                            last
+                        </a>`);
+
+        const paginationElement = document.querySelector('.pagination-items');
+        paginationElement.innerHTML = '';
+        paginationItems.forEach(item => {
+            paginationElement.innerHTML += item;
+        });
+
+       
+
+
+         // attache eventListener to the items 
+         const paginationItremsElements = document.querySelectorAll('.pagination-items .pagination-item');
+         paginationItremsElements.forEach((item, index) => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                console.log(e.target.dataset.page);
+                const page = parseInt(e.target.dataset.page);
+
+                console.log(page);
+                changeIndex(page == 0 ? 1 : page);
+            });
+        });
+
+
+
+    }
 
 </script>
 

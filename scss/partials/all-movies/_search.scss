@@ -84,7 +84,10 @@
         display: grid;
         grid-template-columns: repeat(5 , 1fr);
         gap: 2rem;
-
+        @include mq($lg){
+            grid-template-columns: repeat(3 , 1fr);
+            gap: 1rem;
+        }
         @include mq($sm){
             grid-template-columns: repeat(2 , 1fr);
             gap: 1rem;

@@ -1,0 +1,29 @@
+.pagination {
+    .pagination-items {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+
+        .pagination-item {
+            border: none;
+            outline: none;
+            color: $dark-gray;
+            background-color: white;
+            padding: .8em 1em;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px 0 rgba(black, .1);
+            transition: .2s ease-in;
+
+            @include mq($sm) {
+                font-size: .8rem;
+            }
+
+            &.active,
+            &:hover {
+                background-color: $light-red ;
+                color: white;
+            }
+
+        }
+    }
+}

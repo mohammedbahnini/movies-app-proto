@@ -9,16 +9,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- Slick Slider CSS -->
-        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Slick Slider CSS -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/app.css">
 </head>
@@ -155,13 +161,13 @@
                         <div class="movie-card-footer">
                             <p>Avengers</p>
                         </div>
-                        
+
                     </div>
 
 
                     <div class="last-added-item movie-card">
                         <div class="movie-card-body">
-   <div class="movie-hover">
+                            <div class="movie-hover">
                                 <btton class="movie-link">View Details</btton>
                             </div>
                             <div class="movie-poster">
@@ -642,48 +648,48 @@
     });
 
     const config = {
-        slidesToShow : 4 , 
-        slidesToScroll : 4 ,
-        responsive : [
-        {
-            breakpoint : 992 , 
-            settings : {
-                slidesToShow : 3 , 
-                slidesToScroll :3
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
             }
-        } 
-        ,
-        {
-            breakpoint : 768  , 
-            settings  :{
-                slidesToShow : 2 , 
-                slidesToScroll : 2
-            }
-        } ,
-       
-    ]
+            ,
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+
+        ]
     };
-    
-    $(document).ready(function(){
 
-      $('.last-added-items').slick({
-        ...config ,
-        nextArrow : $('.last-added .next') , 
-        prevArrow : $('.last-added .prev') 
-      });
+    $(document).ready(function () {
 
-      $('.most-downloads-items').slick({
-        ...config , 
-        nextArrow : $('.most-downloads .next') , 
-        prevArrow : $('.most-downloads .prev') 
-      });
+        $('.last-added-items').slick({
+            ...config,
+            nextArrow: $('.last-added .next'),
+            prevArrow: $('.last-added .prev')
+        });
+
+        $('.most-downloads-items').slick({
+            ...config,
+            nextArrow: $('.most-downloads .next'),
+            prevArrow: $('.most-downloads .prev')
+        });
 
 
-      $('.upcoming-items').slick({
-        ...config ,
-        nextArrow : $('.upcoming .next') , 
-        prevArrow : $('.upcoming .prev') 
-      });
+        $('.upcoming-items').slick({
+            ...config,
+            nextArrow: $('.upcoming .next'),
+            prevArrow: $('.upcoming .prev')
+        });
     });
 </script>
 

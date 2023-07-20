@@ -2,6 +2,8 @@
 @import 'partials/shared/general';
 @import 'partials/shared/header';
 @import 'partials/shared/movie-card';
+@import 'partials/shared/pagination';
+
 
 // @import 'partials/home/hero';
 // @import 'partials/home/features';
@@ -11,3 +13,4 @@
 // @import 'partials/home/upcoming';
 
 @import 'partials/all-movies/search';
+@import 'partials/all-movies/movies-wrapper';

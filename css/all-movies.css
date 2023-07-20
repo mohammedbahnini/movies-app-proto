@@ -11,8 +11,7 @@ html {
 body {
   min-height: 100vh;
   font-family: "Lunasima", sans-serif;
-  background-color: #f6f7ff;
-  height: 2000px; }
+  background-color: #f6f7ff; }
 
 .container {
   max-width: calc( 1200px + 2rem);
@@ -74,7 +73,7 @@ p {
     border-radius: 50%;
     padding: 1rem;
     font-size: 1.6rem;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.9);
     cursor: pointer;
     opacity: .5;
     transition: .2S ease-in; }
@@ -229,6 +228,26 @@ header {
         padding: 1rem;
         font-size: .8rem; } }
 
+.pagination .pagination-items {
+  display: flex;
+  gap: 1rem;
+  justify-content: center; }
+  .pagination .pagination-items .pagination-item {
+    border: none;
+    outline: none;
+    color: #829bb0;
+    background-color: white;
+    padding: .8em 1em;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    transition: .2s ease-in; }
+    @media only screen and (max-width: 768px) {
+      .pagination .pagination-items .pagination-item {
+        font-size: .8rem; } }
+    .pagination .pagination-items .pagination-item.active, .pagination .pagination-items .pagination-item:hover {
+      background-color: #d81f26;
+      color: white; }
+
 .search {
   height: 40rem;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.9)), url("../../assets/posters.jpg");
@@ -293,6 +312,10 @@ header {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 2rem; }
+    @media only screen and (max-width: 1200px) {
+      .search .filters {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem; } }
     @media only screen and (max-width: 768px) {
       .search .filters {
         grid-template-columns: repeat(2, 1fr);
@@ -330,3 +353,17 @@ header {
         .search .filters .filter .select-container select option {
           background-color: white;
           color: black; }
+
+.movies-wrapper .main-section-title {
+  margin-bottom: 0; }
+.movies-wrapper .movies-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 5rem 0; }
+  @media only screen and (max-width: 992px) {
+    .movies-wrapper .movies-items {
+      grid-template-columns: repeat(3, 1fr); } }
+  @media only screen and (max-width: 768px) {
+    .movies-wrapper .movies-items {
+      grid-template-columns: repeat(2, 1fr); } }

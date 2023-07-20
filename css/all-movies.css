@@ -232,6 +232,9 @@ header {
   display: flex;
   gap: 1rem;
   justify-content: center; }
+  @media only screen and (max-width: 768px) {
+    .pagination .pagination-items {
+      gap: .5rem; } }
   .pagination .pagination-items .pagination-item {
     border: none;
     outline: none;
@@ -250,9 +253,10 @@ header {
 
 .search {
   height: 40rem;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.9)), url("../../assets/posters.jpg");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.9)), url("../../assets/posters3.jpg");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-position: center; }
   .search .container {
     display: flex;
     flex-direction: column;
@@ -363,7 +367,7 @@ header {
   padding: 5rem 0; }
   @media only screen and (max-width: 992px) {
     .movies-wrapper .movies-items {
-      grid-template-columns: repeat(3, 1fr); } }
+      grid-template-columns: repeat(4, 1fr); } }
   @media only screen and (max-width: 768px) {
     .movies-wrapper .movies-items {
       grid-template-columns: repeat(2, 1fr); } }

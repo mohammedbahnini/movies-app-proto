@@ -3,7 +3,9 @@
         display: flex;
         gap: 1rem;
         justify-content: center;
-
+        @include mq($sm){
+            gap: .5rem;
+        }
         .pagination-item {
             border: none;
             outline: none;

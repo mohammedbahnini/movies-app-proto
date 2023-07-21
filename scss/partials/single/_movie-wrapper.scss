@@ -14,7 +14,8 @@
         flex: 1.2;
        
         @include mq($sm){
-            flex: 1;
+            width: 80%;
+            margin: 0 auto ;
         }
         .movie-poster-wrapper{
            border-radius: 10px;
@@ -47,7 +48,9 @@
 
     .movie-details{
         flex: 2.7;
-        //padding-left: 8rem;
+        @include mq($sm){
+            width: 100%;
+        }
         .movie-title{
             display: flex;
             align-items: center;
